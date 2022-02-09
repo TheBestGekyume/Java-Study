@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="v1" placeholder="Digite um valor"> <br>
+        <input type="text" id="v2" placeholder="Digite um outro valor">
+        <button type="button" onclick="soma()">calcular</button>
+        <h2 id="resposta"></h2>
+    </form>
+</body>
+</html>
+
+<script>
+    function soma(){
+        var valor1 = document.getElementById("v1").value;
+        var valor2 = document.getElementById("v2").value;
+        var result = parseInt(valor1) + parseInt(valor2);
+        document.getElementById("resposta").innerHTML = result;
+    }
+</script>
