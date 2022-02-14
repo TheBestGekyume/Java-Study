@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body style="background-color: #4e3372;">
+    <!-- Escreva um programa para calcular e imprimir o número de lâmpadas necessárias para iluminar um determinado cômodo
+         de uma residência. Dados de entrada: a potência da lâmpada utilizada (em watts), as dimensões (largura e 
+         comprimento, em metros) do cômodo. Considere que a potência necessária é de 18 watts por metro quadrado -->
+    
+    <form>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="watts" placeholder="Potência"><br>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="largura" placeholder="Largura"><br>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="comprimento" placeholder="Comprimento"><br>
+        <button style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" type="button" onclick="lampadaCalc()">calcular</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000;  font-family: monospace;"></h1>
+
+</body>
+</html>
+
+<script>
+    function lampadaCalc(){
+        var W = parseFloat(document.getElementById("watts").value);
+        var larg = parseFloat(document.getElementById("largura").value);
+        var comp = parseFloat(document.getElementById("comprimento").value);
+        // console.log("Itens Capturados", W,larg,comp);
+        var calc = ((larg * comp) * 18) / W;
+        // console.log(calc);
+        document.getElementById("saida").innerHTML = "<p> A quantidade de lampadas:" + calc + "</p>";
+
+    }
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- Escreva um programa para ler um valor e escrever se é positivo ou negativo. Considere o valor zero como positivo. -->
+    
+    <form>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="number1" placeholder="Escreva um numero"><br>
+        <button style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" type="button" onclick="sinal()">calcular</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+<script>
+    function sinal() {
+        var n = parseFloat(document.getElementById("number1").value);
+
+        if (n > 0) {
+            document.getElementById("saida").innerHTML = "Numero Positivo";
+        }
+        if (n == 0) {
+            document.getElementById("saida").innerHTML = "Numero Neutro";
+        }
+        else {
+            document.getElementById("saida").innerHTML = "Numero Negativo";
+        }      
+    }
+</script>

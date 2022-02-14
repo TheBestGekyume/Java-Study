@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercicios</title>
 </head>
-<body>
+<body style="background-color: #4e3372;">
     <!-- Escreva um programa para ler o raio de um círculo, calcular e escrever a sua área (Pi * (raio * raio)) -->
 
     <form>
-        <input type="text" id="raio" placeholder="Raio do círculo"> <br>
-        <button type="button" onclick="area()">calcular</button>
-        <h2 id="resposta"></h2>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="raio" placeholder="Raio do círculo"> <br>
+        <button style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" type="button" onclick="area()">calcular</button>
+        <h1 style="color: #000000;"  id="resposta"></h1>
     </form>
 
 
@@ -25,6 +25,6 @@
         var raio = document.getElementById("raio").value;
         
         var result = 3.14* (parseFloat(raio) * parseFloat(raio));
-        document.getElementById("resposta").innerHTML = result;
+        document.getElementById("resposta").innerHTML = 'Resultado = ' + result;
     }
 </script>
