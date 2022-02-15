@@ -23,15 +23,13 @@
 <script>
     function sinal() {
         var n = parseFloat(document.getElementById("number1").value);
-
+        
         if (n > 0) {
-            document.getElementById("saida").innerHTML = "Numero Positivo";
-        }
-        if (n == 0) {
-            document.getElementById("saida").innerHTML = "Numero Neutro";
-        }
-        else {
-            document.getElementById("saida").innerHTML = "Numero Negativo";
+            document.getElementById("saida").innerHTML = 'Numero Positivo';
+        } else if (n == 0) {
+            document.getElementById("saida").innerHTML = 'Numero Neutro';
+        } else {
+            document.getElementById("saida").innerHTML = 'Numero Negativo';
         }      
     }
 </script>

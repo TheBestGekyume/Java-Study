@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- 9) As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem compradas pelo menos 
+doze. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o valor total da compra. -->
+    
+    <form>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="maças" placeholder="Numero de maças"><br>
+        <button style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" type="button" onclick="calcMaça()">calcular</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+<!-- <script>
+    
+    function principal() {  //main
+        var quantMaça = parseInt(document.getElementById)('quantMaça').value;
+    }
+
+    function saidaDados() {
+        ;
+    }
+
+    function calcMaça (quantMaça = 0) {
+        // var quantMaça = parseInt(document.getElementById('maças').value);
+        var valorUnidade = 0;
+
+        if (quantMaça < 12) {
+            valorUnidade = 0.25;
+        } 
+        
+        else {
+           valorUnidade = 0.30;
+        }   
+        // document.getElementById('saida').innerHTML = quantMaça * valorUnidade;
+    }
+</script> -->
+
+<script>
+    function principal() {
+        var rapadura = parseInt(document.getElementById("quant").value);
+
+        document.getElementById("saida").innerHTML = "Valor a Pagar: " + calcularValores(rapadura, 24, .10);
+
+    }
+
+    function calcularValores(quantidade = 0, minQuant = 12, valorMin = .25, valorMax = .30) {
+        var valorUnit = 0;
+        if (quantidade >= minQuant) {
+            valorUnit = valorMin;
+        } else {
+            valorUnit = valorMax;
+        }
+        var resp = quantidade * valorUnit;
+        return resp;
+    }
+</script>

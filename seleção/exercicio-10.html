@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- 10) Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais)
+    e escrevê-los em ordem crescente. -->
+    
+    <form>
+        <input id="number1" placeholder="Digite um número" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number" ><br>
+        <input id="number2" placeholder="Digite outro número" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number" ><br>
+        <input id="number3" placeholder="Digite outro número" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number" ><br>
+        <button type="button" onclick="mainController()" style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" >Entrar</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+
+<script>
+    function mainController() {
+        var x = parseInt(document.getElementById('number1').value);
+        var y = parseInt(document.getElementById('number2').value);
+        var z = parseInt(document.getElementById('number3').value);
+        
+        document.getElementById('saida').innerHTML = ordenar(x,y,z);
+    }
+
+    function ordenar(a=10, b=20, c=30) {
+        var temp = 0
+        
+        if(a > b){
+            temp = a;
+            a = b;
+            b = temp;
+        }
+
+        if (a > c){
+            temp = a ;
+            a = c;
+            c = temp;
+        }
+
+        if (b > c){
+            temp = b;
+            b = c;
+            c = temp;
+        }
+
+        return " " + a + ", " + b + ", " + c
+    }
+
+</script>

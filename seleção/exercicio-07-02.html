@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+    <!-- Escreva um programa para ler 2 valores (considere que não serão informados valores iguais) e escrever o maior deles.-->
+    
+    <form>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="metros" placeholder="Comprimento da pista"><br>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="voltas" placeholder="Número de voltas"><br>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="abastecimento" placeholder="Número de abastecimentos"><br>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="consumo" placeholder="Consumo do veiculo"><br>
+        <button style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" type="button" onclick="litros()">calcular</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+<script>
+    function litros() {
+        var m = parseFloat(document.getElementById("metros").value);
+        var vol = parseFloat(document.getElementById("voltas").value);
+        var stop = parseFloat(document.getElementById("abastecimento").value);
+        var gasto = parseFloat(document.getElementById("consumo").value);
+        console.log(m, vol,stop, gasto);
+        var calcLitros = (((m * vol) / 1000) / gasto) / stop;
+        document.getElementById("saida").innerHTML = "Quantidade de litros:" + calcLitros + "L";        
+    }
+</script>

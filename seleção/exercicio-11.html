@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- 11) Escreva um programa que verifique a validade de uma senha fornecida pelo usuário. A senha válida é o número 1234.
+         Devem ser impressas as seguintes mensagens:
+         ACESSO PERMITIDO caso a senha seja válida.
+         ACESSO NEGADO caso a senha seja inválida. -->
+    
+    <form>
+        <input style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="text" id="senha" placeholder="Password"><br>
+        <button style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" type="button" onclick="confirmação()">Entrar</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+
+<script>
+
+    function confirmação(){
+        var pw = document.getElementById('senha').value;
+        if(pw == '1234'){
+            document.getElementById('saida').innerHTML = "ACESSO PERMITIDO"
+        } else {
+            document.getElementById('saida').innerHTML = "ACESSO NEGADO"
+        }
+}
+
+
+
+    // function principal() {
+    //     var pw = parseInt(document.getElementById("senha").value);
+
+    //     document.getElementById("saida").innerHTML = "Valor a Pagar: " + calcularValores(pw);
+
+    // }
+
+    // function calcularValores(quantidade = 0, minQuant = 12, valorMin = .25, valorMax = .30) {
+    //     var valorUnit = 0;
+    //     if (quantidade >= minQuant) {
+    //         valorUnit = valorMin;
+    //     } else {
+    //         valorUnit = valorMax;
+    //     }
+    //     var resp = quantidade * valorUnit;
+    //     return resp;
+    // }
+</script>
