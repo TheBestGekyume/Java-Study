@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- 16) Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Calcular e imprimir o seguinte:
+    
+    - Se o número de lados for igual a 3 escrever TRIANGULO e o valor do seu perímetro.
+    - Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área.
+    - Se o número de lados for igual a 5 escrever PENTÁGONO. 
+    - Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO.
+    - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.
+Observação: Considere que o usuário poderá informar qualquer valor para o número de lados -->
+    
+    <form>
+        <input type="number" id="QuantLado" placeholder="Numero de lados" style="padding: 10px; margin-bottom: 10px; font-size: 18px;"><br>
+        <input type="number" id="MedidaLado" placeholder="Lado em centímetros" style="padding: 10px; margin-bottom: 10px; font-size: 18px;"><br>
+        <button type="button" onclick="mainController()" style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;">Resultado</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+
+
+<script>
+    function mainController() {
+        var QuantLado = parseFloat(document.getElementById("QuantLado").value);
+        var MedidaLado = parseFloat(document.getElementById("MedidaLado").value);
+        document.getElementById('saida').innerHTML = resultado(QuantLado, MedidaLado);
+    }
+
+    function resultado(num , cm) {
+        if(num == 3){
+            return 'O perímetro desse Trinagulo é = ' + (num * cm)
+        }
+
+        if (num == 4){
+            return 'A área desse Quadrado é = ' + (cm * cm)
+        }
+
+        if (num == 5){
+            return 'O polígono é um Pentagono'
+        }
+
+        if(num > 5){
+            return 'Polígono Não Identificado.'
+        }
+        
+        else{
+            return 'Não é um Polígono.'
+        }
+    }
+</script>

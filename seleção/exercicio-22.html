@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- 22) Escreva um programa que leia a idade de 2 homens e 2 mulheres (considere que a idade dos homens será sempre 
+    diferente, assim como das mulheres). Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova,
+    e o produto das idades do homem mais novo com a mulher mais velha. -->
+    
+    <form>
+        <input id="homem1" placeholder="Idade homem 1" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number" >h1<br>
+        <input id="homem2" placeholder="Idade homem 2" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number" >h2<br>
+        <input id="mulher1" placeholder="Idade mulher 1" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number">m1<br>
+        <input id="mulher2" placeholder="Idade mulher 2" style="padding: 10px; margin-bottom: 10px; font-size: 18px;" type="number">m2<br>
+        <button type="button" onclick="mainController()" style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;" >Calcular</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+
+<script>
+    function mainController() {
+        var h1 = parseInt(document.getElementById("homem1").value);
+        var h2 = parseInt(document.getElementById("homem2").value);
+        var m1 = parseInt(document.getElementById("mulher1").value);
+        var m2 = parseInt(document.getElementById("mulher2").value);
+        document.querySelector('#saida').innerHTML = idadeCalc(h1, h2, m1 ,m2);
+    }
+
+    function idadeCalc(h1=0, h2=0, m1=0, m2=0) {
+        var temp = 0
+        
+        if(h1 > h2){
+            temp = h1;
+            h1 = h2;
+            h2 = temp;
+        }
+
+        if (m1 > m2){
+            temp = m1;
+            m1= m2;
+            m2 = temp;
+        }
+
+        return  h1+m2 + ' ' + h2*m1
+    }
+</script>

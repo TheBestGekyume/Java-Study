@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+<body style="background-color: #4e3372;">
+    
+<!-- 14) Escreva um programa para ler o número de gols marcados pelo Grêmio e o número de gols marcados pelo Inter em um GRENAL.
+     Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE. -->
+    
+    <form>
+        <input type="number" id="Gremio" placeholder="Gols do Grêmio" style="padding: 10px; margin-bottom: 10px; font-size: 18px;"><br>
+        <input type="number" id="Inter" placeholder="Gols do Internacional" style="padding: 10px; margin-bottom: 10px; font-size: 18px;"><br>
+        <button type="button" onclick="mainController()" style="padding: 10px 30px; margin-bottom: 10px; font-size: 18px;">Resultado</button>
+    </form>
+
+    <h1 id="saida" style="color: #000000; font-family: monospace;"></h1>
+
+</body>
+</html>
+
+
+
+<script>
+    function mainController() {
+        var GolG = parseInt(document.getElementById("Gremio").value);
+        var GolI = parseInt(document.getElementById("Inter").value);
+        document.getElementById('saida').innerHTML = resultado(GolG, GolI);
+    }
+
+    function resultado(Gol1, Gol2) {
+        if(Gol1>Gol2){
+            return 'Gremio Venceu'
+        }
+        else if(Gol1<Gol2){
+            return 'Internacional Venceu'
+        }
+        else{
+            return 'Jogo Empatado'
+        }
+            
+        
+    }
+</script>
